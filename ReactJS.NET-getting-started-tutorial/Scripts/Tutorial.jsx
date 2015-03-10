@@ -1,7 +1,7 @@
 ﻿var data = [
-  { Author: "Daniel Lo Nigro", Text: "Hello ReactJS.NET World!" },
-  { Author: "Pete Hunt", Text: "This is one comment" },
-  { Author: "Jordan Walke", Text: "This is *another* comment" }
+  { Author: "Kevin Isom", Text: "Hello ReactJS.NET World!" },
+  { Author: "A Person", Text: "This is one comment" },
+  { Author: "Someone Else", Text: "This is *another* comment" }
 ];
 
 var Comment = React.createClass({
@@ -51,10 +51,13 @@ var CommentForm = React.createClass({
 	},
 	render: function() {
   		return (
-			<form className="commentForm" onSubmit={this.handleSubmit}>
-				<input type="text" placeholder="Your name" ref="author" />
-				<input type="text" placeholder="Say something..." ref="text" />
-				<input type="submit" value="Post" />
+			<form className="commentForm pure-form" onSubmit={this.handleSubmit}>
+				<fieldset>
+					<legend>Post Your Comment</legend>
+					<input type="text" placeholder="Your name" ref="author" />
+					<input type="text" placeholder="Say something..." ref="text" />
+					<input type="submit" value="Post" className="pure-button  pure-button-primary" />
+				</fieldset>
 			</form>
 		);
 	}

@@ -8,18 +8,30 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Hello React</title>
+	<title>Hello React</title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="http://cdn.rawgit.com/tilomitra/csstypography/master/css/pure-typography.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/tilomitra/cssextras/master/css/pure-extras.css">
+	<style>
+		.main {
+			margin: 10px 100px;
+		}
+	</style>
+	
 </head>
-<body>
-    @Html.React("CommentBox", new
-    {
-        initialData = Model,
-        url = Url.Action("Comments"),
-        submitUrl = Url.Action("AddComment"),
-        pollInterval = 2000,
-    })
-    <script src="http://fb.me/react-0.12.2.js"></script>
-    @Scripts.Render("~/bundles/main")
-    @Html.ReactInitJavaScript()
-</body>
+	<body>
+		<div class="main">
+			@Html.React("CommentBox", new
+			{
+			initialData = Model,
+			url = Url.Action("Comments"),
+			submitUrl = Url.Action("AddComment"),
+			pollInterval = 2000,
+			})
+			<script src="http://fb.me/react-0.12.2.js"></script>
+			@Scripts.Render("~/bundles/main")
+			@Html.ReactInitJavaScript()
+
+		</div>
+	</body>
 </html>

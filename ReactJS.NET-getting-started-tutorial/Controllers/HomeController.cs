@@ -14,17 +14,17 @@ namespace ReactDemo.Controllers
             {
                 new CommentModel
                 {
-                    Author = "Daniel Lo Nigro",
+                    Author = "Kevin Isom",
                     Text = "Hello ReactJS.NET World!"
                 },
                 new CommentModel
                 {
-                    Author = "Pete Hunt",
+                    Author = "A Person",
                     Text = "This is one comment"
                 },
                 new CommentModel
                 {
-                    Author = "Jordan Walke",
+                    Author = "Someone Else",
                     Text = "This is *another* comment"
                 },
             };
